@@ -1,0 +1,36 @@
+<html>
+<head><script type="text/javascript">        function preventBack() { window.history.forward(); }        setTimeout("preventBack()", 0);        window.onunload = function () { null };</script>
+<title>Login form for parking lot management system</title>
+<link rel="stylesheet" type="text/css" href="stylesheet_parkingLot.css">
+</head>
+	<body class="loginpg">
+		<div class="column">
+		<img class="loginimg" src="https://st2.depositphotos.com/6126600/11899/v/950/depositphotos_118994560-stock-illustration-lettering-background-welcome-back-to.jpg">
+	  </div>
+		<div class="column">
+		<form action="login.php" method="post" autocomplete="off">
+		<table class="logintable" border=0>
+		<tr>
+			<td colspan=2><h1> LOGIN</h1></td>
+		</tr>
+		<tr>
+		<td ><h2> Username: </h2></td>
+		<td><input type="name" name="user" id="user" placeholder="Enter username">
+		</tr>
+		<tr>
+		<td ><h2> Password: </h2></td>
+		<td><input type="name" name="pass" id="pass" placeholder="Enter password">
+		</tr>
+		<tr>
+		<td colspan=2>
+		<a href="Intropg_parkinglot.html">
+			<button class="button" type= button>Back</button>
+		</a>
+		<input class="button" type="submit" name="submit" id="submit" value="Submit"/>
+	  </td>
+		</tr>
+		</table>
+	</form>
+	</div>
+	</body>
+</html>
