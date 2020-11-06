@@ -1,36 +1,98 @@
-<html>
-<head><script type="text/javascript">        function preventBack() { window.history.forward(); }        setTimeout("preventBack()", 0);        window.onunload = function () { null };</script>
-<title>Login form for parking lot management system</title>
-<link rel="stylesheet" type="text/css" href="stylesheet_parkingLot.css">
-</head>
-	<body class="loginpg">
-		<div class="column">
-		<img class="loginimg" src="https://st2.depositphotos.com/6126600/11899/v/950/depositphotos_118994560-stock-illustration-lettering-background-welcome-back-to.jpg">
-	  </div>
+<html>
+<head>
+	<style>
+
+	.my-error-class {
+
+		color:darkred;
+
+		font-size: 14px;
+
+		font-weight: bold;
+
+	}
+
+	.my-valid-class {
+
+		color:teal;
+
+	}
+
+	</style>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+	<script>
+	$(document).ready(function()
+
+	{
+
+  $("#loginform").validate({
+
+		errorClass: "my-error-class",validClass: "my-valid-class",
+
+    rules:
+
+		{
+
+      user :
+
+			{required: true},
+
+      pass:
+
+			{required: true}
+
+    },
+
+		messages:
+
+		{
+
+			pass: {required: "<br>*Please provide a password"},
+
+			user: {required: "<br>*Please provide a user-name"}
+
+		}
+
+  });
+
+	});
+
+</script>
+<title>Login form for parking lot management system</title>
+<link rel="stylesheet" type="text/css" href="stylesheet_parkingLot.css">
+</head>
+	<body class="loginpg">
 		<div class="column">
-		<form action="login.php" method="post" autocomplete="off">
-		<table class="logintable" border=0>
-		<tr>
-			<td colspan=2><h1> LOGIN</h1></td>
-		</tr>
-		<tr>
-		<td ><h2> Username: </h2></td>
-		<td><input type="name" name="user" id="user" placeholder="Enter username">
-		</tr>
-		<tr>
-		<td ><h2> Password: </h2></td>
-		<td><input type="name" name="pass" id="pass" placeholder="Enter password">
-		</tr>
-		<tr>
-		<td colspan=2>
-		<a href="Intropg_parkinglot.html">
-			<button class="button" type= button>Back</button>
-		</a>
-		<input class="button" type="submit" name="submit" id="submit" value="Submit"/>
-	  </td>
-		</tr>
-		</table>
+		<img class="loginimg" src="https://st2.depositphotos.com/6126600/11899/v/950/depositphotos_118994560-stock-illustration-lettering-background-welcome-back-to.jpg">
+	  </div>
+		<div class="column">
+		<form id="loginform" action="login.php" method="post" autocomplete="off">
+		<table class="logintable" border=0>
+		<tr>
+			<td colspan=2><h1> LOGIN</h1></td>
+		</tr>
+		<tr>
+		<td ><h2> Username: </h2></td>
+		<td><input type="name" name="user" id="user" placeholder="Enter username">
+		</tr>
+		<tr>
+		<td ><h2> Password: </h2></td>
+		<td><input type="password" name="pass" id="pass" placeholder="Enter password">
+		</tr>
+		<tr>
+		<td colspan=2>
+
+		<button class="button" type= button onclick="window.location.href='Intropg_parkinglot.html';">Back</button>
+
+		<input class="button" type="submit" name="submit" id="submit" value="Submit"/>
+	  </td>
+		</tr>
+		</table>
 	</form>
-	</div>
-	</body>
-</html>
+	</div>
+	</body>
+</html>

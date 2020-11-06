@@ -1,55 +1,115 @@
-<html>
-<head>
-	<title>Sign-up form for parking lot management system</title>
-	<link rel="stylesheet" type="text/css" href="stylesheet_parkingLot.css">
-</head>
-	<body class="signuppg">
-		<center>
-		<form action="register.php" method="post" >
-		<table class="signuptable" border=0>
-
-		<tr>
-			<td colspan=2><h1><u> SIGN-UP </u></h1></td>
-		</tr>
-
-		<tr>
-		<td ><b>Username :</b></td>
-		<td><input class="signup" type="text" name="user" id="user" placeholder="Enter username"/> </td>
-		</tr>
-
-		<tr>
-		<td ><b>Password :</b></td>
-		<td><input class="signup" type="text" name="pass" id="pass" placeholder="Enter password"/></td>
-		</tr>
-
-		<tr>
-		<td ><b>Address :</b></td>
-		<td> <textarea class="signup" name="address" id="address" placeholder="Fill in the address of your lot"></textarea> </td>
-		</tr>
-
-		<tr>
-		<td ><b>Contact No :</b></td>
-		<td> <input class="signup" type="text" name="contact" id="contact" placeholder="Enter your phone number"/></td>
-		</tr>
-
-		<tr>
-		<td ><b>Email :</b></td>
-		<td> <input class="signup" type="email" name="email" id="email" placeholder="Enter your E-mail ID"/> </td>
-		</tr>
-
-	  <tr>
-		<td ><b>Parking lot name :<b></td>
-		<td><input class="signup" type="text" name="lot_name" id="lot_name" placeholder="Enter your parking lot name"/> </td>
-		</tr>
-
-		<tr>
-			<td colspan=2>
-			<a href="Intropg_parkinglot.html"><button class="button" type= button>Back</button></a>
-			<input class="button" type="submit" name="submit" id="submit" value="Submit"/>
-		  </td>
-		</tr>
-	</table>
-	</form>
-	</center>
-	</body>
-</html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js">
+  </script>
+  <style>
+  .my-error-class
+  {
+    color:darkred;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .my-valid-class
+  {    color:teal;	}
+  .col1
+  {
+    width:30%;
+    font-size: 24px;
+    text-align: center;
+  }
+  .col2
+  {
+    width:65%;
+    font-size: 20px;
+    text-align: center;
+    padding:25px;
+  }
+  </style>
+  <script>
+  $(document).ready(function()
+  {
+    $("#signupform").validate
+    ({
+      errorClass: "my-error-class",validClass: "my-valid-class",
+      rules: {
+        user: { required: true, minlength: 5},
+        address: "required",
+        contact: { required: true, digits:true, minlength: 10, maxlength:10 } ,
+        lot_name: "required",
+        email: { required: true, email: true },
+        pass: { required: true, minlength: 8 }
+      },
+      messages:
+      {
+        pass:
+        {
+          required: "<br>*Please provide a password",
+          minlength: "<br>*Password must be atleast 8 characters"
+        },
+        user: {
+          required: "<br>*Please provide a user name",
+          minlength: "<br>*Username must be atleast 5 characters"
+        },
+        email:
+        { required:"<br>*Please enter your email address" ,email:"<br>*Enter valid email address"},
+        contact:
+        {
+          required:"<br>*Please enter your contact no.",
+          digits:"<br>*Enter valid number",
+          minlength:"<br>*Your contact no must be 10 digits",
+          maxlength: "<br>*Your contact no must be 10 digits"
+        },
+        address:{ required:"<br>*Please enter your lot address"},
+        lot_name:{ required:"<br>*Please enter your lot name"}
+      }
+    });
+  });
+</script>
+<title>Sign-up form for parking lot management system</title>
+<link rel="stylesheet" type="text/css" href="stylesheet_parkingLot.css">
+</head>
+<body class="signuppg">
+  <center>
+    <form action="register.php" id="signupform" method="post" >
+      <table class="signuptable" border=0>
+        <tr>
+          <td colspan=2><h1><u> SIGN-UP </u></h1></td>
+        </tr>
+        <tr>
+          <td class="col1"><b>Username :</b></td>
+          <td class="col2"><input class="signup" type="text" name="user" id="user" placeholder="Enter username"/></td><br>
+        </tr>
+        <tr>
+          <td class="col1"><b>Password :</b></td>
+          <td class="col2"><input class="signup" type="password" name="pass" id="pass" placeholder="Enter password"/></td><br>
+        </tr>
+        <tr>
+          <td class="col1"><b>Address :</b></td>
+          <td class="col2"> <textarea class="signup" name="address" id="address" placeholder="Fill in the address of your lot"></textarea></td>
+          <br>
+        </tr>
+        <tr>
+          <td class="col1"><b>Contact No :</b></td>
+          <td class="col2"> <input class="signup" type="text" name="contact" id="contact" placeholder="Enter your phone number"/></td><br>
+        </tr>
+        <tr>
+          <td class="col1"><b>Email :</b></td>
+          <td class="col2"> <input class="signup" type="email" name="email" id="email" placeholder="Enter your E-mail ID"/></td><br>
+        </tr>
+        <tr>
+          <td class="col1"><b>Parking lot name :<b></td>
+          <td class="col2"><input class="signup" type="text" name="lot_name" id="lot_name" placeholder="Enter your parking lot name"/></td><br>
+        </tr>
+        <tr>
+          <td colspan=2>
+            <button class="button" type= button onclick="window.location.href='intropg_parkinglot.html';">Back</button>
+            <input class="button" type="submit" name="submit" id="submit" value="Submit"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </center>
+</body>
+</html>

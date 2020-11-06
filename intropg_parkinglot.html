@@ -1,154 +1,305 @@
-<html>
-<head>
-<title>Welcome to parking lot management system!</title>
-<link rel="stylesheet" type="text/css" href="stylesheet_parkingLot.css">
-  <style>
-  h1,h4 {
-    position: relative;
-    color: black;
-    font : georgia;
-  }
-  .navbar
-  {
-    top:0;
-    height:110px !important;
-  }
-  .navbar-nav > li > a {padding-top:10px !important; padding-bottom:15px !important; height:40px;}
-  .navbar:not(.navbar_collapse)
-  {
-      background:#000014!important;color: white;
-  }
-  .navbutton:hover
-  {
-    color:#000!important;background-color:#f2f3f4!important
-  }
-  .bg
-  {
-        height: 60%;
-  			width:100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-  			position: relative;
-     		display: flex;
-      	align-items: center;
-      	justify-content: center;
-  }
-  .bg::before
-  {
-        content: "";
-        background-image: url("https://cdn1.vectorstock.com/i/1000x1000/75/00/blue-mosaic-glass-wallpaper-vector-21617500.jpg");
-        position: absolute;
-        top: 0px;  background-size: cover;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        opacity: 1;
-  }
-  </style>
-       <title>Welcome to parking lot management system!</title>
-       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-       <!-- Google Fonts -->
-       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-       <!-- Bootstrap core CSS -->
-       <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-       <!-- Material Design Bootstrap -->
-       <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
-
-       <!-- JQuery -->
-       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-       <!-- Bootstrap tooltips -->
-       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-       <!-- Bootstrap core JavaScript -->
-       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-       <!-- MDB core JavaScript -->
-       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
-       <link rel="stylesheet" type="text/css" href="stylesheet_parkingLot.css">
-</head>
-<body data-spy="scroll" data-offset="50" >
-<section>
-    <nav>
-    <div class="navbar bar">
-        <div class="h_padding bar" id="navbarTogglerDemo02">
-          <h3>PARKING MANAGER</h3>
-          <a class="bar-item  navbutton" href="login_parkinglot.html"><b>LOGIN</b></a>
-          <a class="bar-item  navbutton" href="signup_parkinglot.html"><b>SIGN-UP</b></a>
-        </div>
-    </div>
-   </nav>
-</section>
-<main>
-<section >
-        <div class="view" id="intro-section">
-        <div class="bg" id="intro-section">
-	<div class="container">
-		<h1><b>Parking lot management system</b></h1>
-		<h4 >Our website here will help you manage your parking lot in an easy way.</h4>
-	</div>
-	</div>
-
-</section>
-</main>
-
-<main>
-  <section class="py-5" style="background-color:#000014;color: snow">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 py-3">
-          <img style="border-radius: 4px;" src="https://www.lintechtt.com/wp-content/uploads/2017/08/need-smart-parking-lot-management-system.jpg" width="100%" height="90%" >
-        </div>
-        <div class="col-sm-6 col-md-6 text-left py-3">
-          <p class="w3-large">
-            <h5>Are you an owner of a shop struggling to manage the vehicles being parked in your parking lot?</h5>
-            You're here at the right place!! Welcome to the parking lot management system, where you, as the owner of a shop with a
-            parking lot, can efficently make use of this software to manage the vehicles that line up at your shop. You can set the rate that you
-            charge per hour of the vehicle that is being parked, generate bills when the vehicle leaves the lot, keep track of the slots available in your parking,
-            and so on! So get registered and start parking your customer's vehicles efficiently!!
-            <a class="bar-item  navbutton" href="https://parkingboxx.com/why-automate-parking#:~:text=A%20well%2Ddesigned%20automated%20parking,must%20pay%20to%20get%20out">
-              <b>Why automate parking?</b>
-            </a>
-          </p>
-          <hr>
-        </div>
-    </div>
-  </div>
-  </section>
-  </main>
-  <section class="text-center py-5" style="background-color:#f0ffff">
-    <div class="container">
-      <div class="row">
-        <h4>Why did we come up with this idea?</h4>
-        <p  text-align="right" >
-          Since managing the parking lot manually is a tedious job, implementing a parking lot management system for transaction<br>
-          management, searching for a particular vehicle using the license plate, availability of slots etc. We decided to generalize<br>
-          it and allow the manager of the parking lot to login to the system and personalize the rates /modify them in the future.
-        </p>
-      </div>
-    </div>
-  </section>
-  <main>
-    <section class="py-5" style="background-color:#000014;color: snow">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 py-3">
-            <img style="border-radius: 4px;" src="https://digital.hbs.edu/platform-rctom/wp-content/uploads/sites/4/2016/11/parking-cartoon2.jpg" width="100%" height="90%" >
-          </div>
-          <div class="col-sm-6 col-md-6 text-left py-3">
-            <p class="w3-large" >
-              <h3 style="color: white" >What all features does this system have?</h3>
-              You have to Sign up to access the system's features. Upon signing in, you will be given a lot of options ranging from adding a vehicle to generating the bill.
-              To search for a particular vehicle, click on the search button and you can enter the vehicle's license plate number. The system will give you details about the vehicle
-              : Parked slot, owner name and entry time. You can also search for empty slots in the parking lot to direct the customer to a particular slot, which saves time for the customer who otherwise
-              has to run around the whole parkinglot in search of a space to park.
-            </p>
-            <hr>
-          </div>
-      </div>
-    </div>
-    </section>
-    </main>
-<footer class="f_bar f_padding" style="background-color:#f0ffff">
-<h4>Contact:</h4><br>Pavitra Vasudevan-19BCE1756<br>V Raghav Anand-19BCE1415<br>@ VIT Chennai<br>
-</footer>
-</body>
-</html>
+<html>
+
+<head>
+
+<title>Welcome to parking lot management system!</title>
+
+<link rel="stylesheet" type="text/css" href="stylesheet_parkingLot.css">
+
+  <style>
+
+  h1,h4 {
+
+    position: relative;
+
+    color: black;
+
+    font : georgia;
+
+  }
+
+  .navbar
+
+  {
+
+    top:0;
+    overflow:hidden;
+    height:110px !important;
+
+  }
+
+  .navbar-nav > li > a {padding-top:10px !important; padding-bottom:15px !important; height:40px;}
+
+  .navbar:not(.navbar_collapse)
+
+  {
+
+      background:#000014!important;color: white;
+
+  }
+
+  .navbutton:hover
+
+  {
+
+    color:#000!important;background-color:#f2f3f4!important
+
+  }
+
+  .bg
+
+  {
+
+        height: 60%;
+
+  			width:100%;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+  			position: relative;
+
+     		display: flex;
+
+      	align-items: center;
+
+      	justify-content: center;
+
+  }
+
+  .bg::before
+
+  {
+
+        content: "";
+
+        background-image: url("https://cdn1.vectorstock.com/i/1000x1000/75/00/blue-mosaic-glass-wallpaper-vector-21617500.jpg");
+
+        position: absolute;
+
+        top: 0px;  background-size: cover;
+
+        right: 0px;
+
+        bottom: 0px;
+
+        left: 0px;
+
+        opacity: 1;
+
+  }
+
+  </style>
+
+       <title>Welcome to parking lot management system!</title>
+
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+       <!-- Google Fonts -->
+
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+       <!-- Bootstrap core CSS -->
+
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+
+       <!-- Material Design Bootstrap -->
+
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+
+
+       <!-- JQuery -->
+
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+       <!-- Bootstrap tooltips -->
+
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+
+       <!-- Bootstrap core JavaScript -->
+
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+       <!-- MDB core JavaScript -->
+
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+
+       <link rel="stylesheet" type="text/css" href="stylesheet_parkingLot.css">
+
+</head>
+
+<body data-spy="scroll" data-offset="50" >
+
+<section>
+
+    <nav>
+
+    <div class="navbar bar">
+
+        <div class="h_padding bar" id="navbarTogglerDemo02">
+
+          <h3>PARKING MANAGER</h3>
+
+          <a class="bar-item  navbutton" href="login_parkinglot.html"><b> LOGIN   </b></a>
+
+          <a class="bar-item  navbutton" href="signup_parkinglot.html"><b>  SIGN-UP   </b></a>
+
+        </div>
+
+    </div>
+
+   </nav>
+
+</section>
+
+<main>
+
+<section >
+
+        <div class="view" id="intro-section">
+
+        <div class="bg" id="intro-section">
+
+	<div class="container">
+
+		<h1><b>Parking lot management system</b></h1>
+
+		<h4 >Our website here will help you manage your parking lot in an easy way.</h4>
+
+	</div>
+
+	</div>
+
+
+
+</section>
+
+</main>
+
+
+
+<main>
+
+  <section class="py-5" style="background-color:#000014;color: snow">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-6 py-3">
+
+          <img style="border-radius: 4px;" src="https://www.lintechtt.com/wp-content/uploads/2017/08/need-smart-parking-lot-management-system.jpg" width="100%" height="90%" >
+
+        </div>
+
+        <div class="col-sm-6 col-md-6 text-left py-3">
+
+          <p class="w3-large">
+
+            <h5>Are you an owner of a shop struggling to manage the vehicles being parked in your parking lot?</h5>
+
+            You're here at the right place!! Welcome to the parking lot management system, where you, as the owner of a shop with a
+
+            parking lot, can efficently make use of this software to manage the vehicles that line up at your shop. You can set the rate that you
+
+            charge per hour of the vehicle that is being parked, generate bills when the vehicle leaves the lot, keep track of the slots available in your parking,
+
+            and so on! So get registered and start parking your customer's vehicles efficiently!!
+
+            <a class="bar-item  navbutton" href="https://parkingboxx.com/why-automate-parking#:~:text=A%20well%2Ddesigned%20automated%20parking,must%20pay%20to%20get%20out">
+
+              <b>Why automate parking?</b>
+
+            </a>
+
+          </p>
+
+          <hr>
+
+        </div>
+
+    </div>
+
+  </div>
+
+  </section>
+
+  </main>
+
+  <section class="text-center py-5" style="background-color:#f0ffff">
+
+    <div class="container">
+
+      <div class="row">
+
+        <h4>Why did we come up with this idea?</h4>
+
+        <p text-align="right" >
+
+          Since managing the parking lot manually is a tedious job, implementing a parking lot management system for transaction<br>
+
+          management, searching for a particular vehicle using the license plate, availability of slots etc. We decided to generalize<br>
+
+          it and allow the manager of the parking lot to login to the system and personalize the rates /modify them in the future.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <main>
+
+    <section class="py-5" style="background-color:#000014;color: snow">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-6 py-3">
+
+            <img style="border-radius: 4px;" src="https://digital.hbs.edu/platform-rctom/wp-content/uploads/sites/4/2016/11/parking-cartoon2.jpg" width="100%" height="90%" >
+
+          </div>
+
+          <div class="col-sm-6 col-md-6 text-left py-3">
+
+            <p class="w3-large" >
+
+              <h3 style="color: white" >What all features does this system have?</h3>
+
+              You have to Sign up to access the system's features. Upon signing in, you will be given a lot of options ranging from adding a vehicle to generating the bill.
+
+              To add a particular vehicle to the lot, click on the "Add vehicles" button and you can enter the vehicle's license plate number by using the image of the license plate and using our image sensing technology the license plate number is automatically read into the system. The system will give you details about the vehicle
+
+              : Parked slot, owner name and entry time. For generating the bill again choose the license plate of the leaving vehicle and the bill will be generated according to the rate set by the manager.
+
+            </p>
+
+            <hr>
+
+          </div>
+
+      </div>
+
+    </div>
+
+    </section>
+
+    </main>
+
+<footer class="f_bar f_padding" style="background-color:#f0ffff">
+
+<h4>Contact:</h4><br>Pavitra Vasudevan-19BCE1756<br>V Raghav Anand-19BCE1415<br>@ VIT Chennai<br>
+
+</footer>
+
+</body>
+
+</html>
